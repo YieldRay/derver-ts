@@ -1,0 +1,55 @@
+{
+    "name": "derver-ts",
+    "type": "commonjs",
+    "version": "0.0.1",
+    "description": "Tiny Development Server for your web-applications with livereload and watchers",
+    "main": "./dist/derver.cjs",
+    "module": "./dist/derver.mjs",
+    "bin": {
+        "derver": "./bin/derver"
+    },
+    "files": [
+        "dist",
+        "bin"
+    ],
+    "exports": {
+        ".": {
+            "node": "./dist/derver.cjs",
+            "require": "./dist/derver.cjs",
+            "import": "./dist/derver.mjs"
+        },
+        "./rollup-plugin": "./dist/plugins/rollup.cjs"
+    },
+    "scripts": {
+        "build": "rm -rf dist && node esbuild.mjs && tsc",
+        "prestart": "node esbuild.mjs --dev",
+        "start": "node test/test.cjs",
+        "bin": "./bin/derver"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.17",
+        "esbuild": "^0.20.0",
+        "node-watch": "^0.7.4",
+        "typescript": "^5.3.3"
+    },
+    "author": "YieldRay",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YieldRay/derver-ts.git"
+    },
+    "bugs": {
+        "url": "https://github.com/YieldRay/derver-ts/issues"
+    },
+    "homepage": "https://github.com/YieldRay/derver-ts#readme",
+    "keywords": [
+        "server",
+        "devserver",
+        "dev-server",
+        "livereload",
+        "live-reload",
+        "serve",
+        "http-server",
+        "http"
+    ]
+}

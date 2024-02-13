@@ -1,0 +1,6 @@
+node_modules
+bin
+dist
+*-plugin-cjs.js
+*-plugin-esm.js
+pnpm-lock.yaml

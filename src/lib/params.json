@@ -1,0 +1,55 @@
+{
+    "name": "derver",
+    "description": "Derver is a tiny development web server with live-reload and files watching.",
+    "usage": "[params] [serve dir]",
+    "params": [
+        {
+            "name": "host",
+            "help": "Host where to bind server"
+        },
+        {
+            "name": "port",
+            "help": "Port where to bind server"
+        },
+        {
+            "name": "index",
+            "help": "Index file for server"
+        },
+        {
+            "name": "watch",
+            "multiple": true,
+            "help": "Directory for watching. May be used multiple times."
+        },
+        {
+            "name": "no-watch",
+            "help": "Prevent any watching."
+        },
+        {
+            "name": "compress",
+            "help": "Return files compressed by gzip or brotli, if client supports it."
+        },
+        {
+            "name": "cache",
+            "help": "Add Cache-control header."
+        },
+        {
+            "name": "spa",
+            "help": "Enaples SPA mode when all page requests will be responced by index page."
+        },
+        {
+            "name": "production",
+            "help": "Run server in production mode: enables --compress,--cache and--no-watch parameters"
+        },
+        {
+            "name": "help",
+            "help": "Show usage information"
+        }
+    ],
+    "examples": [
+        "",
+        "dist/public",
+        "--host=0.0.0.0 --port=5000",
+        "--watch=dist/public --watch=src",
+        "--production"
+    ]
+}
