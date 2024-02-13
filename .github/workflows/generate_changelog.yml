@@ -2,7 +2,8 @@ name: Generate Changelog
 
 on:
     push:
-        branches: [main, master]
+        branches: [main]
+    workflow_dispatch:
 
 jobs:
     changelog:
