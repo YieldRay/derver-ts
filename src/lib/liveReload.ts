@@ -1,9 +1,9 @@
+import type { Middleware, Options, OptionsParsed } from './types'
+import { lrClient } from './liveReloadClient'
 import http from 'node:http'
-import os from 'node:os'
 import path from 'node:path'
 import fs from 'node:fs'
-import { Options, Middleware, OptionsParsed } from './types'
-import { lrClient } from './liveReloadClient'
+import os from 'node:os'
 
 const LR_URL = '/derver-livereload-events'
 const LR_REMOTE_URL = '/derver-livereload-remote'

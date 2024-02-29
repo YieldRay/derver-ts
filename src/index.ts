@@ -1,7 +1,9 @@
-import { startHTTPServer, createMiddlewaresList } from './lib/http'
-import { startWatchers } from './lib/watch'
-export { createRemote } from './lib/liveReload'
+import { createMiddlewaresList, startHTTPServer } from './lib/http'
 import type { Options, OptionsParsed } from './lib/types'
+import { startWatchers } from './lib/watch'
+import process from 'node:process'
+
+export { createRemote } from './lib/liveReload'
 
 const defaultOptions: Options = {
     port: 7000,

@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { Options } from './types'
+import type { Options } from './types'
 
 /**
  * Must be a clean function.

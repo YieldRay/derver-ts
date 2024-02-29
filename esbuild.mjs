@@ -1,6 +1,6 @@
-import { build } from 'esbuild'
-import process from 'node:process'
 import pkg from './package.json' assert { type: 'json' }
+import process from 'node:process'
+import { build } from 'esbuild'
 
 const DEV = process.argv.includes('--dev')
 

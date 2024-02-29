@@ -24,12 +24,15 @@
         "build": "rm -rf dist && node esbuild.mjs && tsc",
         "prestart": "node esbuild.mjs --dev",
         "start": "node test/test.cjs",
+        "format": "prettier --write .",
         "bin": "./bin/derver"
     },
     "devDependencies": {
-        "@types/node": "^20.11.19",
+        "@types/node": "^20.11.22",
         "esbuild": "^0.20.1",
         "node-watch": "^0.7.4",
+        "prettier": "^3.2.5",
+        "prettier-plugin-sort-imports": "^1.8.3",
         "typescript": "^5.3.3"
     },
     "author": "YieldRay",

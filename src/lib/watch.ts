@@ -1,7 +1,8 @@
-import c from './colors'
-import { liveReload } from './liveReload'
 import watch, { type Watcher } from 'node-watch'
 import type { OptionsParsed } from './types'
+import { liveReload } from './liveReload'
+import process from 'node:process'
+import c from './colors'
 
 export function startWatchers(options: OptionsParsed) {
     if (typeof options.watch === 'string') options.watch = [options.watch]

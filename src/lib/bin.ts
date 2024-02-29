@@ -1,4 +1,5 @@
 import PARAMS from './params.json'
+import process from 'node:process'
 
 export function retrieveParams() {
     const result = {

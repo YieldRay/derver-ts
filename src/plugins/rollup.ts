@@ -1,5 +1,5 @@
-import { Options } from '../lib/types'
 import { derver as server } from '../index'
+import { Options } from '../lib/types'
 
 export function derver(options: Options) {
     let first = true

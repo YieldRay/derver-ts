@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { derver } from './'
+import { getUsageText, retrieveParams } from './lib/bin'
 import { Options } from './lib/types'
-import { retrieveParams, getUsageText } from './lib/bin'
 import process from 'node:process'
+import { derver } from './index'
 
 const input = retrieveParams()
 

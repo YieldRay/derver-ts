@@ -1,14 +1,4 @@
-import http from 'node:http'
-import fs from 'node:fs/promises'
-import os from 'node:os'
-import path from 'node:path'
-import zlib from 'node:zlib'
-import mime from './mime'
-import c from './colors'
-import table from './table'
-import { mwLiveReload, mwInjectLiveReload } from './liveReload'
-import { version } from '../../package.json'
-import {
+import type {
     Middleware,
     MiddlewareReq,
     MiddlewareRes,
@@ -16,7 +6,18 @@ import {
     Options,
     OptionsParsed,
 } from './types'
+import { mwInjectLiveReload, mwLiveReload } from './liveReload'
+import { version } from '../../package.json'
 import type { PathLike } from 'node:fs'
+import process from 'node:process'
+import fs from 'node:fs/promises'
+import http from 'node:http'
+import path from 'node:path'
+import zlib from 'node:zlib'
+import table from './table'
+import mime from './mime'
+import c from './colors'
+import os from 'node:os'
 
 export function startHTTPServer(options: OptionsParsed) {
     const production =
