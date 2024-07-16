@@ -1,10 +1,11 @@
 {
     "name": "derver-ts",
     "type": "commonjs",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Tiny Development Server for your web-applications with livereload and watchers",
     "main": "./dist/derver.cjs",
     "module": "./dist/derver.mjs",
+    "types": "./dist/index.d.ts",
     "bin": {
         "derver": "./bin/derver"
     },
@@ -16,7 +17,8 @@
         ".": {
             "node": "./dist/derver.cjs",
             "require": "./dist/derver.cjs",
-            "import": "./dist/derver.mjs"
+            "import": "./dist/derver.mjs",
+            "types": "./dist/index.d.ts"
         },
         "./rollup-plugin": "./dist/plugins/rollup.cjs"
     },
@@ -28,12 +30,12 @@
         "bin": "./bin/derver"
     },
     "devDependencies": {
-        "@types/node": "^20.11.22",
-        "esbuild": "^0.20.1",
+        "@types/node": "^20.14.10",
+        "esbuild": "^0.23.0",
         "node-watch": "^0.7.4",
-        "prettier": "^3.2.5",
-        "prettier-plugin-sort-imports": "^1.8.3",
-        "typescript": "^5.3.3"
+        "prettier": "^3.3.3",
+        "prettier-plugin-sort-imports": "^1.8.6",
+        "typescript": "^5.5.3"
     },
     "author": "YieldRay",
     "license": "MIT",
